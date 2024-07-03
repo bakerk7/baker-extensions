@@ -18,8 +18,9 @@ const NO_CHANGES = {
  * @returns {FunctionRunResult}
  */
 export function run(input) {
-  const serviceFeeVariantId = "gid://shopify/ProductVariant/49754959675708";
-
+  const serviceFeeVariantId = "gid://shopify/ProductVariant/48211558203414";
+  console.log(input.cart.lines);
+  
   // Calculate the cart total
   const cartTotal = input.cart.lines.reduce((total, cartLine) => {
     return total + parseFloat(cartLine.cost.totalAmount.amount);
